@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
 
-.vazirmatn-name {
-  font-family: "Vazirmatn", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-}
-
 
 @tailwind base;
 @tailwind components;
@@ -20,16 +8,38 @@ html {
 
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #333;
+    --background: #000;
     --foreground: #ededed;
   }
 }
+
+/* Add this to your globals.css or create a separate CSS file */
+
+@keyframes moveAndFade {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100px, 100px);
+  }
+}
+
+.shape {
+  position: absolute;
+  background: rgba(255, 165, 0, 0.7); /* Orange with some transparency */
+  border-radius: 50%; /* Makes the shape circular */
+  animation: moveAndFade 5s linear infinite;
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
 
 body {
   color: var(--foreground);

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -59,11 +58,11 @@ const links = [
   'راهنمای سفر',
 ];
 
-export default function HeaderImg() {
+export default function HeaderImg({id}) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth={false} sx={{ padding: 0, margin: '10px 0' }}>
+      <Container id ={'footer'} maxWidth={false} sx={{ padding: 0, margin: '10px 0' , bgcolor:'transparent'}}>
         <Box
           sx={{
             position: 'relative',

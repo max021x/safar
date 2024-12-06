@@ -86,14 +86,18 @@ const tourdetails = [
   {
     id: 7,
     detail: {
+      //
       city: 'کیش',
+      
       img: 'http://localhost/images/list_cities/kish.webp',
       fee: '600,000 تومان',
       days: '4',
       places: ['ساحل مرجان', 'شهر حریره', 'کشتی یونانی', 'پارک دلفین‌ها'],
       date: '2024-11-30',
       information: ['رفت: پرواز شماره 333 از فرودگاه مهرآباد', 'برگشت: پرواز شماره 334 به فرودگاه کیش'],
+      //
       tourCode: 'T007',
+      //
       hotel: 'هتل داریوش'
     }
   },
@@ -155,4 +159,6 @@ const tourdetails = [
   }
 ];
 
-export default tourdetails;
+
+
+export default tourdetails ;

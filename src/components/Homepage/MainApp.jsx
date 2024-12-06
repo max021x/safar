@@ -28,7 +28,7 @@ function App() {
       <Text_Info />
       <AppLinkQR />
       <Advanteges />
-      <Footer />
+      <Footer  />
     </>
   );
 }
