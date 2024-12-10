@@ -10,7 +10,9 @@ import Link from '@mui/material/Link';
 import LocalCarWashIcon from '@mui/icons-material/LocalCarWash';
 import { Button } from '@mui/material';
 import Footer from '@/components/Homepage/Footer';
-
+import Divider from '@mui/material/Divider';
+import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 const Tour_info = ({ object }) => {
   const [isSticky, setIsSticky] = useState(true);
   const [bottomOffset, setBottomOffset] = useState(30);
@@ -78,22 +80,24 @@ const Tour_info = ({ object }) => {
       </Typography>
       <Container />
 
-      {/* main box */}
+  {/* main box */}
       <Box
         sx={{
-          bgcolor:'#fff',
+          bgcolor: '#fff',
           position: 'relative',
           marginTop: '10px',
           padding: '10px',
           width: '100%',
           height: 'auto',
           boxShadow: 1,
-          paddingBottom: '30%',
+          paddingBottom: '70%',
           textAlign: 'right',
         }}
       >
+  {/* container box */}
         <Box
           sx={{
+            marginRight: '10px',
             width: '60%',
             height: 'auto',
             boxShadow: 1,
@@ -105,6 +109,7 @@ const Tour_info = ({ object }) => {
         >
           <Typography
             sx={{
+              border: '1px solid ',
               position: 'absolute',
               top: '25px',
               width: '100%',
@@ -112,7 +117,6 @@ const Tour_info = ({ object }) => {
               fontSize: '1.5rem',
               marginTop: '20px',
               fontFamily: 'Vazirmatn',
-              boxShadow: 5,
               borderRadius: 5,
               padding: '10px 10px',
             }}
@@ -147,11 +151,11 @@ const Tour_info = ({ object }) => {
             </Typography>
           </Typography>
         </Box>
-        {/* button box */}
+  {/* button box */}
         <Box
           id="button-box"
           sx={{
-            bgcolor:'#fff',
+            bgcolor: '#fff',
             position: isSticky ? 'fixed' : 'absolute',
             width: '30%',
             marginTop: '5px',
@@ -191,7 +195,7 @@ const Tour_info = ({ object }) => {
               bottom: '30px',
               left: '70px',
               textAlign: 'center',
-              backgroundColor: 'orange',
+              backgroundColor: '#fd6a16',
               fontFamily: 'Vazirmatn',
               fontSize: '1.5rem',
               color: '#fff',
@@ -201,8 +205,99 @@ const Tour_info = ({ object }) => {
             انتخاب اتاق و تعداد نفرات
           </Button>
         </Box>
+  {/* raft & bargsht */}
+        <Box
+          sx={{
+            marginTop:'150px',
+            marginRight: '10px',
+            width: '60%',
+            height: 'auto',
+            boxShadow: 1,
+            borderRadius: 10,
+            display: 'flex',
+            position: 'absolute',
+            right: '0',
+          }}
+        >
+          <Typography
+            sx={{
+              border: '1px solid ',
+              position: 'absolute',
+              top: '25px',
+              width: '100%',
+              textAlign: 'right',
+              fontSize: '1rem',
+              marginTop: '20px',
+              fontFamily: 'Vazirmatn',
+              borderRadius: 5,
+              padding: '10px 10px',
+            }}
+          >
+            اطلاعات رفت و برگشت
+            <Divider sx={{padding:'5px 0'}}/>
+            {/* here */}
+          </Typography>
+        </Box>
+      
+        <Box
+          sx={{
+            marginTop:'300px',
+            marginRight: '10px',
+            width: '60%',
+            height: 'auto',
+            boxShadow: 1,
+            borderRadius: 10,
+            display: 'flex',
+            position: 'absolute',
+            right: '0',
+          }}
+        >
+          <Typography
+            sx={{
+              border: '1px solid ',
+              position: 'absolute',
+              top: '25px',
+              width: '100%',
+              textAlign: 'right',
+              fontSize: '1.5rem',
+              marginTop: '20px',
+              fontFamily: 'Vazirmatn',
+              borderRadius: 5,
+              padding: '10px 10px',
+            }}
+          >
+            تور {object.detail.city}
+            <Typography
+              sx={{
+                position: 'absolute',
+                left: '0',
+                top: '25px',
+                padding: '0 10px',
+                fontFamily: 'Vazirmatn',
+              }}
+            >
+              {object.detail.tourCode} : کد تور
+            </Typography>
+            <Typography
+              sx={{
+                padding: '10px 0px',
+                fontFamily: 'Vazirmatn',
+              }}
+            >
+              {object.detail.hotel}
+              <Link sx={{ padding: '10px' }} href={'/'}>
+                {'>'}اطلاعات هتل
+              </Link>
+            </Typography>
+            <Typography>
+              {object.detail.places.map((i, index) => (
+                <StarIcon key={index} sx={{ color: 'orange' }} />
+              ))}
+            </Typography>
+          </Typography>
+        </Box>
       </Box>
-      <Footer id='footer'/>
+      <Footer id='footer' />
     </>
   );
 };

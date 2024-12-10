@@ -10,10 +10,10 @@ import Button from '@mui/material/Button';
 import Link from 'next/link';
 export default function Navbar({ toggleDrawer }) {
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#fff' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#fd6a16' }}>
       <Toolbar>
         <Link href={'/safarmarket'}>
-        <Typography variant="h6" sx={{ flexGrow: 1 , color:'#000', }}>
+        <Typography variant="h6" sx={{ flexGrow: 1 , color:'#fff', }}>
           SAFAR MARKET
         </Typography>
         </Link>
@@ -54,7 +54,7 @@ export default function Navbar({ toggleDrawer }) {
         >
           ثبت نام
         </Button>
-        <IconButton edge="end" color="#000" aria-label="menu" onClick={toggleDrawer}>
+        <IconButton edge="end"  aria-label="menu" onClick={toggleDrawer} sx={{color:'#fff'}}>
           <MenuIcon />
         </IconButton>
       </Toolbar>

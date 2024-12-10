@@ -7,6 +7,7 @@ const images = [
   'http://localhost/images/header_img/blite.webp',
   'http://localhost/images/header_img/exp.webp',
   'http://localhost/images/header_img/haraj.jpg',
+  'http://localhost/images/header_img/phone.webp',
 ];
 
 export default function HeaderImg() {
@@ -42,7 +43,8 @@ export default function HeaderImg() {
             backgroundPosition: 'center',
             width: '100%',
             height: '0',
-            paddingBottom: '30%',
+            paddingBottom: '35%',
+            
             boxShadow:1,
             borderRadius: 2, // Optional: rounded corners
             overflow: 'hidden',
