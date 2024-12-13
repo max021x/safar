@@ -13,6 +13,9 @@ import Footer from '@/components/Homepage/Footer';
 import Divider from '@mui/material/Divider';
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import Comments from '@/components/Comment-section/Comments'
+
+
 const Tour_info = ({ object }) => {
   const [isSticky, setIsSticky] = useState(true);
   const [bottomOffset, setBottomOffset] = useState(30);
@@ -80,7 +83,7 @@ const Tour_info = ({ object }) => {
       </Typography>
       <Container />
 
-  {/* main box */}
+      {/* main box */}
       <Box
         sx={{
           bgcolor: '#fff',
@@ -94,7 +97,7 @@ const Tour_info = ({ object }) => {
           textAlign: 'right',
         }}
       >
-  {/* container box */}
+        {/* container box */}
         <Box
           sx={{
             marginRight: '10px',
@@ -151,7 +154,7 @@ const Tour_info = ({ object }) => {
             </Typography>
           </Typography>
         </Box>
-  {/* button box */}
+        {/* button box */}
         <Box
           id="button-box"
           sx={{
@@ -205,10 +208,10 @@ const Tour_info = ({ object }) => {
             انتخاب اتاق و تعداد نفرات
           </Button>
         </Box>
-  {/* raft & bargsht */}
+        {/* raft & bargsht */}
         <Box
           sx={{
-            marginTop:'150px',
+            marginTop: '150px',
             marginRight: '10px',
             width: '60%',
             height: 'auto',
@@ -234,14 +237,14 @@ const Tour_info = ({ object }) => {
             }}
           >
             اطلاعات رفت و برگشت
-            <Divider sx={{padding:'5px 0'}}/>
+            <Divider sx={{ padding: '5px 0' }} />
             {/* here */}
           </Typography>
         </Box>
-      
+        {/* some other info */}
         <Box
           sx={{
-            marginTop:'300px',
+            marginTop: '300px',
             marginRight: '10px',
             width: '60%',
             height: 'auto',
@@ -296,6 +299,32 @@ const Tour_info = ({ object }) => {
             </Typography>
           </Typography>
         </Box>
+        {/* all comments */}
+        <Box
+          sx={{
+            marginTop: '500px',
+            marginRight: '10px',
+            width: '60%',
+            height: 'auto',
+            display: 'flex',
+            position: 'absolute',
+            right: '0',
+          }}
+        >
+          <Box
+            sx={{
+              width: '100%', // Adjust the width as needed
+              height: '400px', // Adjust the height as needed
+              overflowY: 'scroll', // Add vertical scroll bar
+              border: '1px solid #ccc', // Optional: Add a border for visual clarity
+              padding: '16px', // Optional: Add padding
+              borderRadius: '8px', // Optional: Add rounded corners
+            }}
+          >
+            <Comments />
+          </Box>
+        </Box>
+        {/* main box*/}
       </Box>
       <Footer id='footer' />
     </>

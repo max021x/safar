@@ -8,14 +8,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
+import ImageListItem  from '@mui/material/ImageListItem';
+
 export default function Navbar({ toggleDrawer }) {
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#fd6a16' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#fff' }}>
       <Toolbar>
         <Link href={'/safarmarket'}>
-        <Typography variant="h6" sx={{ flexGrow: 1 , color:'#fff', }}>
-          SAFAR MARKET
-        </Typography>
+          <ImageListItem
+          sx={{maxWidth:'200px'}}
+          >
+            <img src='http://localhost/images/logo/logo.png'/>
+          </ImageListItem>
         </Link>
         <Box sx={{ flexGrow: 1 }} /> {}
         <Button
@@ -54,7 +58,7 @@ export default function Navbar({ toggleDrawer }) {
         >
           ثبت نام
         </Button>
-        <IconButton edge="end"  aria-label="menu" onClick={toggleDrawer} sx={{color:'#fff'}}>
+        <IconButton edge="end"  aria-label="menu" onClick={toggleDrawer} sx={{color:'#333'}}>
           <MenuIcon />
         </IconButton>
       </Toolbar>
