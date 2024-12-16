@@ -17,6 +17,7 @@ import Comments from '@/components/Comment-section/Comments'
 
 
 const Tour_info = ({ object }) => {
+  {console.log(object , 'ajab')}
   const [isSticky, setIsSticky] = useState(true);
   const [bottomOffset, setBottomOffset] = useState(30);
 
@@ -148,9 +149,9 @@ const Tour_info = ({ object }) => {
               </Link>
             </Typography>
             <Typography>
-              {object.detail.places.map((i, index) => (
+              {/* {object.detail.places.map((i, index) => (
                 <StarIcon key={index} sx={{ color: 'orange' }} />
-              ))}
+              ))} */}
             </Typography>
           </Typography>
         </Box>
@@ -293,9 +294,9 @@ const Tour_info = ({ object }) => {
               </Link>
             </Typography>
             <Typography>
-              {object.detail.places.map((i, index) => (
+              {/* {object.detail.places.map((i, index) => (
                 <StarIcon key={index} sx={{ color: 'orange' }} />
-              ))}
+              ))} */}
             </Typography>
           </Typography>
         </Box>
