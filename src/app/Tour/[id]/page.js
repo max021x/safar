@@ -29,7 +29,7 @@ const About = () => {
       try {
         const data = await fetch(`/api/toures/${pid}`);
         const response = await data.json();
-        setTourData(response[0]); // Set the fetched data to state
+        setTourData(response[0]); 
       } catch (error) {
         console.log(error);
       }        

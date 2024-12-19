@@ -5,24 +5,21 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import StarIcon from '@mui/icons-material/Star';
 import Link from '@mui/material/Link';
 import LocalCarWashIcon from '@mui/icons-material/LocalCarWash';
 import { Button } from '@mui/material';
 import Footer from '@/components/Homepage/Footer';
 import Divider from '@mui/material/Divider';
-import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import Comments from '@/components/Comment-section/Comments'
-// import StarIcon from '@mui/icons-material/Star';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
-
+import Rating from '@/components/Rating/Rate'
 const Tour_info = ({ object }) => {
   const [isSticky, setIsSticky] = useState(true);
   const [bottomOffset, setBottomOffset] = useState(30);
   // const [Info , setInfo] =  useState(null) ;
   useEffect(() => {
     const handleScroll = () => {
+      setPid(object.detail.id)
       const footer = document.getElementById('footer');
       const buttonBox = document.getElementById('button-box');
       const footerTop = footer.getBoundingClientRect().top;
@@ -147,11 +144,6 @@ const Tour_info = ({ object }) => {
               <Link sx={{ padding: '10px' }} href={'/'}>
                 {'>'}اطلاعات هتل
               </Link>
-            </Typography>
-            <Typography>
-              {/* {object.detail.places.map((i, index) => (
-                <StarIcon key={index} sx={{ color: 'orange' }} />
-              ))} */}
             </Typography>
           </Typography>
         </Box>
@@ -338,7 +330,8 @@ const Tour_info = ({ object }) => {
             position: 'absolute',
             right: '0',
           }}
-        >
+        > 
+          {/* comment */}
           <Box
             sx={{
               width: '100%',            
@@ -348,13 +341,11 @@ const Tour_info = ({ object }) => {
               padding: '16px', 
               borderRadius: '8px', 
             }}
-          >
-            <Comments />
+          >   
+          <Comments />
           </Box>
+          <Rating pid={Number(object.detail.id)}/>
         </Box>
-
-
-
         {/* main box*/}
       </Box>
       <Footer id='footer' />
