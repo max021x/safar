@@ -30,7 +30,6 @@ const About = () => {
         const data = await fetch(`/api/toures/${pid}`);
         const response = await data.json();
         setTourData(response[0]); // Set the fetched data to state
-        console.log(response[0]);
       } catch (error) {
         console.log(error);
       }        
@@ -42,7 +41,7 @@ const About = () => {
     <>
       <Navbar toggleDrawer={toggleDrawer('right', true)} />
       <Sidebar toggleDrawer={toggleDrawer} state={state} />
-      {tourData ? <Tour_info object={{ detail: tourData }} /> : <p>Loading...</p>} {/* Conditional rendering */}
+      {tourData ? <Tour_info object={{ detail: tourData }} /> : <p>Loading...</p>} 
     </>
   );
 };

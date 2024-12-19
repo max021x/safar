@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        style={{background:'#f2f1ed'}}
+        style={{background:'#f2f1ed' , fontFamily:'Vazirmatn'}}
         className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
         {children}
