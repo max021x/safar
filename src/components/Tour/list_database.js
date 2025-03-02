@@ -14,18 +14,18 @@ const cities = [
 ]
 
 const images = [
-  'http://localhost/images/list_cities/tehran.jpg',
-  'http://localhost/images/list_cities/esfahan.jpg',
-  'http://localhost/images/list_cities/shiraz.webp',
-  'http://localhost/images/list_cities/mashhad.jpg',
-  'http://localhost/images/list_cities/tabriz.jpg',
-  'http://localhost/images/list_cities/yazd.jpg',
-  'http://localhost/images/list_cities/kish.webp',
-  'http://localhost/images/list_cities/qom.webp',
-  'http://localhost/images/list_cities/kashan.jpg',
-  'http://localhost/images/list_cities/hamedan.jpg',
-  'http://localhost/images/list_cities/kerman.jpg',
-  'http://localhost/images/list_cities/rasht.webp',
+  '/images/list_cities/tehran.jpg',
+  '/images/list_cities/esfahan.jpg',
+  '/images/list_cities/shiraz.webp',
+  '/images/list_cities/mashhad.jpg',
+  '/images/list_cities/tabriz.jpg',
+  '/images/list_cities/yazd.jpg',
+  '/images/list_cities/kish.webp',
+  '/images/list_cities/qom.webp',
+  '/images/list_cities/kashan.jpg',
+  '/images/list_cities/hamedan.jpg',
+  '/images/list_cities/kerman.jpg',
+  '/images/list_cities/rasht.webp',
 ]
 
 export {images , cities};

@@ -24,10 +24,10 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const apps_imgs = [
-  'http://localhost/images/footer_img/apps/bazaar.webp',
-  'http://localhost/images/footer_img/apps/anardoni.webp',
-  'http://localhost/images/footer_img/apps/myket.webp',
-  'http://localhost/images/footer_img/apps/pwa.webp',
+  '/images/footer_img/apps/bazaar.webp',
+  '/images/footer_img/apps/anardoni.webp',
+  '/images/footer_img/apps/myket.webp',
+  '/images/footer_img/apps/pwa.webp',
 ];
 
 

@@ -4,10 +4,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
-// import {bg_img} from 'src\\images\\test.jpg';
 
 export default function Adv_App() {
   return (
@@ -15,7 +13,7 @@ export default function Adv_App() {
       <CssBaseline />
       <Container maxWidth="ms" sx={{ display: 'flex', justifyContent: 'center' }}>
         <Box sx={{
-          backgroundImage: 'url(http://localhost/images/adv_img/mobile_bg.jpg)',
+          backgroundImage: 'url(/images/adv_img/mobile_bg.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundColor: '#fff',
@@ -30,7 +28,7 @@ export default function Adv_App() {
         }}>
           <Box
             sx={{
-              backgroundImage: 'url(http://localhost/images/adv_img/qrcode.jpg)',
+              backgroundImage: 'url(images/adv_img/qrcode.jpg)',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'contain',
               width: '100px',

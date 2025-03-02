@@ -18,7 +18,7 @@ export default function Navbar({ toggleDrawer }) {
           <ImageListItem
           sx={{maxWidth:'200px'}}
           >
-            <img src='http://localhost/images/logo/logo.png'/>
+            <img src='/images/logo/logo.png'/>
           </ImageListItem>
         </Link>
         <Box sx={{ flexGrow: 1 }} /> {}

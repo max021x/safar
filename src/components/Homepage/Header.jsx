@@ -2,12 +2,14 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-// ثبت نظر وریتینگ تور برای بک اند 
+
+
+
 const images = [
-  'http://localhost/images/header_img/blite.webp',
-  'http://localhost/images/header_img/exp.webp',
-  'http://localhost/images/header_img/haraj.jpg',
-  'http://localhost/images/header_img/phone.webp',
+  './images/header_img/blite.webp',
+  './images/header_img/exp.webp',
+  './images/header_img/haraj.jpg',
+  './images/header_img/phone.webp',
 ];
 
 export default function HeaderImg() {
